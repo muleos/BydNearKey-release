@@ -13,8 +13,12 @@
 
 ## 下载
 
-在 [Releases](../../releases/latest) 里下载 `BydNearKey-vX.Y.Z-unsigned.zip`，解压得到
-`BydNear-vX.Y.Z-unsigned.app`。
+在 [Releases](../../releases/latest) 里下载，同一版本提供两个包：
+
+| 文件 | 说明 |
+|---|---|
+| `BydNearKey-vX.Y.Z-signed.zip` | 已签名（release 证书，`app_gallery` 发布类型），解压得到 `BydNearKey-default-re-signed.app`，多数设备可直接装 |
+| `BydNearKey-vX.Y.Z-unsigned.zip` | 未签名，解压得到 `BydNear-vX.Y.Z-unsigned.app`，需自己用证书重签 |
 
 ## 安装
 
@@ -22,14 +26,18 @@
 # 1. 确认手表已连接（hdc 在 DevEco Studio 的 toolchains 目录下）
 hdc list targets
 
-# 2. 安装
+# 2. 安装（已签名包）
+hdc install -r BydNearKey-default-re-signed.app
+
+# 或安装未签名包（需先自行签名）
 hdc install -r BydNear-v0.9.77-unsigned.app
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
 
-> 发布包为**未签名**产物。装到真机需要设备已开启开发者模式；若要长期使用，
-> 请用你自己的证书对它重新签名。
+若设备上已装同 versionCode 的版本，覆盖安装可能提示版本冲突，先卸载再装即可。
+
+> 未签名包装到真机需要设备已开启开发者模式；若要长期使用，请用你自己的证书重新签名。
 
 ## 首次使用
 
