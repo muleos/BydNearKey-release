@@ -2,18 +2,18 @@
 
 比亚迪手表蓝牙钥匙 · 靠近解锁（HarmonyOS 手表端）。
 
-**本仓库只用于分发安装包，不含源码，也不提供更新日志。** 最新版本请到
-[Releases](../../releases/latest) 下载。
+**本仓库只用于分发安装包，不含源码，也不发布更新日志。** 下载请到 [Releases](../../releases/latest)。
 
 | | |
 |---|---|
 | 包名 | `com.hmos.BydNearkey` |
-| 安装包格式 | `.app`（HarmonyOS App Pack，压缩为 zip 发布） |
+| 当前版本 | v0.9.76（versionCode 1000076） |
 | 最低系统 | HarmonyOS 6.0.0 (API 20) |
+| 安装包格式 | `.app`（HarmonyOS App Pack，压缩为 zip 发布） |
 
 ## 下载
 
-在 [Releases](../../releases/latest) 下载 `BydNearKey-vX.Y.Z-unsigned.zip`，解压得到
+在 [Releases](../../releases/latest) 里下载 `BydNearKey-vX.Y.Z-unsigned.zip`，解压得到
 `BydNear-vX.Y.Z-unsigned.app`。
 
 ## 安装
@@ -23,7 +23,7 @@
 hdc list targets
 
 # 2. 安装
-hdc install -r BydNear-vX.Y.Z-unsigned.app
+hdc install -r BydNear-v0.9.76-unsigned.app
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
@@ -33,8 +33,8 @@ hdc install -r BydNear-vX.Y.Z-unsigned.app
 
 ## 首次使用
 
-1. 打开应用 → 扫码登录页
-2. 用手机上的**比亚迪 App** 扫描表盘二维码 → 手机上点确认
+1. **首次打开会停在激活页，需要输入 6 位激活口令**（口令每天 0 点更新，向作者获取当天口令）
+2. 激活后进扫码登录页，用手机上的**比亚迪 App** 扫描表盘二维码 → 手机上点确认
 3. 登录成功后自动写入车辆信息与蓝牙钥匙，回到首页
 4. 之后靠近车辆即可解锁，离开自动上锁（可在设置里关掉）
 
