@@ -1,6 +1,6 @@
 # BydNearKey
 
-比亚迪手表蓝牙钥匙 · 靠近解锁（HarmonyOS 手表端）。
+比亚迪手表蓝牙钥匙 · 靠近解锁（HarmonyOS 手机端）。
 
 **本仓库只用于分发安装包，不含源码，也不发布更新日志。** 下载请到 [Releases](../../releases/latest)。
 
@@ -23,7 +23,7 @@
 ## 安装
 
 ```bash
-# 1. 确认手表已连接（hdc 在 DevEco Studio 的 toolchains 目录下）
+# 1. 确认手机已连接（hdc 在 DevEco Studio 的 toolchains 目录下）
 hdc list targets
 
 # 2. 安装（已签名包）
