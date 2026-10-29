@@ -2,18 +2,18 @@
 
 比亚迪手表蓝牙钥匙 · 靠近解锁（HarmonyOS 手表端）。
 
-**本仓库只用于分发安装包，不含源码。** 下载请到 [Releases](../../releases/latest)。
+**本仓库只用于分发安装包，不含源码，也不提供更新日志。** 最新版本请到
+[Releases](../../releases/latest) 下载。
 
 | | |
 |---|---|
 | 包名 | `com.hmos.BydNearkey` |
-| 当前版本 | v0.9.75（versionCode 1000075） |
-| 最低系统 | HarmonyOS 6.0.0 (API 20) |
 | 安装包格式 | `.app`（HarmonyOS App Pack，压缩为 zip 发布） |
+| 最低系统 | HarmonyOS 6.0.0 (API 20) |
 
 ## 下载
 
-在 [Releases](../../releases/latest) 里下载 `BydNearKey-vX.Y.Z-unsigned.zip`，解压得到
+在 [Releases](../../releases/latest) 下载 `BydNearKey-vX.Y.Z-unsigned.zip`，解压得到
 `BydNear-vX.Y.Z-unsigned.app`。
 
 ## 安装
@@ -23,7 +23,7 @@
 hdc list targets
 
 # 2. 安装
-hdc install -r BydNear-v0.9.75-unsigned.app
+hdc install -r BydNear-vX.Y.Z-unsigned.app
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
@@ -40,15 +40,6 @@ hdc install -r BydNear-v0.9.75-unsigned.app
 
 车况页可以看电量、车门车窗状态，也能远程控车；首页「后台检测」可以查看
 蓝牙信号强度、手选感应距离阈值。
-
-## 更新日志
-
-- **v0.9.75** — 扫码页精简：去掉 uuid / 引擎自检等调试信息，只留二维码和提示；
-  二维码正下方显示刷新倒计时（150 秒，最后 15 秒变色）；二维码整体居中；
-  左上角返回图标与设置页统一。
-- **v0.9.74** — 发包前稳定性专项：蓝牙四个 native 回调、定时判定链、UI 异步方法
-  全部加异常兜底，修掉一批「什么都没操作应用突然没了」的闪退路径。
-- 更早版本见 [Releases](../../releases)。
 
 ## 免责声明
 
