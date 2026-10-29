@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | 包名 | `com.hmos.BydNearkey` |
-| 当前版本 | v0.9.76（versionCode 1000076） |
+| 当前版本 | v0.9.77（versionCode 1000077） |
 | 最低系统 | HarmonyOS 6.0.0 (API 20) |
 | 安装包格式 | `.app`（HarmonyOS App Pack，压缩为 zip 发布） |
 
@@ -23,7 +23,7 @@
 hdc list targets
 
 # 2. 安装
-hdc install -r BydNear-v0.9.76-unsigned.app
+hdc install -r BydNear-v0.9.77-unsigned.app
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
