@@ -57,6 +57,9 @@
 | `BydNearKey-vX.Y.Z-unsigned.zip` | HarmonyOS App Pack（`.app`）压缩包，解压得到 `BydNear-vX.Y.Z-unsigned.app`；未签名，需自己用证书重签后再装 |
 | `BydNearKey-vX.Y.Z-unsigned.hap` | 单个 HAP（模块级安装包），不用解压，可直接安装；同样未签名 |
 
+> GitHub 不允许 release 资产使用 `.app` 后缀（上传会被 422 拒掉），所以 App Pack 以 `.zip` 提供，
+> 解压出来的 `BydNear-vX.Y.Z-unsigned.app` 就是原文件。
+
 ## 安装
 
 ```bash
