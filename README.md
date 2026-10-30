@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | 包名 | `com.hmos.BydNearkey` |
-| 当前版本 | v0.9.90（versionCode 1000090） |
+| 当前版本 | v0.9.91（versionCode 1000091） |
 | 最低系统 | HarmonyOS 6.0.0 (API 20) |
 | 安装包格式 | `.app`（HarmonyOS App Pack，压缩为 zip 发布） |
 
@@ -18,7 +18,7 @@
 **1. 熄屏靠近解锁、远离上锁**
 手机锁屏放口袋或包里也能用，靠系统长时任务保活。走近车头/车门自动解锁，走远自动落锁。
 优先走蓝牙直连（不经云端往返，快），连不上才回落到云端指令。
-设置里可开「从最近任务中移除」：手滑把最近任务卡片划掉后应用仍在后台跑，蓝牙钥匙与感应解锁不断线。
+划掉最近任务卡片即退出应用（系统标准行为）。v0.9.89/v0.9.90 试过的两套后台保活方案已撤回。
 
 **2. 信号阈值可自定义**
 靠近 / 远离的蓝牙信号阈值都能手调；也可以用「选择感应距离」现场校准，两处各站一会儿自动推荐。
@@ -50,7 +50,7 @@
 
 ## 下载
 
-在 [Releases](../../releases) 里下载，一般直接用最新的 [v0.9.90](../../releases/latest)。每版两个包，按需二选一：
+在 [Releases](../../releases) 里下载，一般直接用最新的 [v0.9.91](../../releases/latest)。每版两个包，按需二选一：
 
 | 文件 | 说明 |
 |---|---|
@@ -60,16 +60,16 @@
 ## 安装
 
 ```bash
-unzip BydNearKey-v0.9.90-unsigned.zip
+unzip BydNearKey-v0.9.91-unsigned.zip
 
 # 1. 确认手机已连接（hdc 在 DevEco Studio 的 toolchains 目录下）
 hdc list targets
 
 # 2a. 装 App Pack（未签名包，需先自行签名）
-hdc install -r BydNear-v0.9.90-unsigned.app
+hdc install -r BydNear-v0.9.91-unsigned.app
 
 # 2b. 或者直接装单独下载的 HAP（不用解压）
-hdc install -r BydNearKey-v0.9.90-unsigned.hap
+hdc install -r BydNearKey-v0.9.91-unsigned.hap
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
@@ -94,8 +94,9 @@ hdc install -r BydNearKey-v0.9.90-unsigned.hap
 
 | 版本 | 状态 | 一句话 |
 |---|---|---|
-| [v0.9.90](../../releases/tag/v0.9.90) | **最新** | 「从最近任务中移除」重做：无窗口后台能力续命，划掉卡片后进程仍在、钥匙不断连 |
-| [v0.9.89](../../releases/tag/v0.9.89) | 归档 | 后台卡片保护（拦截关闭请求，手机端不生效，已被 v0.9.90 取代） |
+| [v0.9.91](../../releases/tag/v0.9.91) | **最新** | **回退版**：撤掉 v0.9.89/0.9.90 两套后台保活改动，功能行为回到 v0.9.88 |
+| [v0.9.90](../../releases/tag/v0.9.90) | 已撤回 | 从最近任务中移除（无窗口后台能力续命）——手机上仍留不住，v0.9.91 已撤掉 |
+| [v0.9.89](../../releases/tag/v0.9.89) | 已撤回 | 后台卡片保护（拦截关闭请求）——手机端不回调，v0.9.91 已撤掉 |
 | [v0.9.88](../../releases/tag/v0.9.88) | 归档 | 隐藏「油液与耗材」卡、健康检测移到页尾、空调卡进页面自动补拉并扩充内容 |
 
 ## 反馈与交流
