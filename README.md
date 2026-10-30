@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | 包名 | `com.hmos.BydNearkey` |
-| 当前版本 | v0.9.91（versionCode 1000091） |
+| 当前版本 | v0.9.92（versionCode 1000092） |
 | 最低系统 | HarmonyOS 6.0.0 (API 20) |
 | 安装包格式 | `.app`（HarmonyOS App Pack，压缩为 zip 发布） |
 
@@ -29,7 +29,7 @@
 
 **4. 车况随时看**
 整车状态（OK 灯、行驶状态、电源状态、车速、功率、冷却液温度）、车门车窗、
-胎压（bar/kPa 双单位 + 监测结论 + 数据时间）、车内 / 车外温度、
+胎压（车端原值 kPa，如 257kPa；四轮位 + 监测结论）、车内 / 车外温度、
 空调（压缩机、设定温度、风量、内外循环、前后除霜、座椅加热通风、方向盘加热、
 自清洁、延时关闭、冷暖箱、冰箱、PM2.5，进页面自动补拉一次快照）、
 里程与能耗（总里程、纯电里程、混动里程、两种平均能耗）、
@@ -50,7 +50,7 @@
 
 ## 下载
 
-在 [Releases](../../releases) 里下载，一般直接用最新的 [v0.9.91](../../releases/latest)。每版两个包，按需二选一：
+在 [Releases](../../releases) 里下载，一般直接用最新的 [v0.9.92](../../releases/latest)。每版两个包，按需二选一：
 
 | 文件 | 说明 |
 |---|---|
@@ -63,16 +63,16 @@
 ## 安装
 
 ```bash
-unzip BydNearKey-v0.9.91-unsigned.zip
+unzip BydNearKey-v0.9.92-unsigned.zip
 
 # 1. 确认手机已连接（hdc 在 DevEco Studio 的 toolchains 目录下）
 hdc list targets
 
 # 2a. 装 App Pack（未签名包，需先自行签名）
-hdc install -r BydNear-v0.9.91-unsigned.app
+hdc install -r BydNear-v0.9.92-unsigned.app
 
 # 2b. 或者直接装单独下载的 HAP（不用解压）
-hdc install -r BydNearKey-v0.9.91-unsigned.hap
+hdc install -r BydNearKey-v0.9.92-unsigned.hap
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
@@ -97,7 +97,8 @@ hdc install -r BydNearKey-v0.9.91-unsigned.hap
 
 | 版本 | 状态 | 一句话 |
 |---|---|---|
-| [v0.9.91](../../releases/tag/v0.9.91) | **最新** | **回退版**：撤掉 v0.9.89/0.9.90 两套后台保活改动，功能行为回到 v0.9.88 |
+| [v0.9.92](../../releases/tag/v0.9.92) | **最新** | 胎压改用车端原值 kPa（不再折算 bar）；胎压/空调卡去掉「数据时间」；设置接口诊断与我的最近动作折叠到 5 条 |
+| [v0.9.91](../../releases/tag/v0.9.91) | 归档 | **回退版**：撤掉 v0.9.89/0.9.90 两套后台保活改动，功能行为回到 v0.9.88 |
 | [v0.9.90](../../releases/tag/v0.9.90) | 已撤回 | 从最近任务中移除（无窗口后台能力续命）——手机上仍留不住，v0.9.91 已撤掉 |
 | [v0.9.89](../../releases/tag/v0.9.89) | 已撤回 | 后台卡片保护（拦截关闭请求）——手机端不回调，v0.9.91 已撤掉 |
 | [v0.9.88](../../releases/tag/v0.9.88) | 归档 | 隐藏「油液与耗材」卡、健康检测移到页尾、空调卡进页面自动补拉并扩充内容 |
