@@ -2,35 +2,33 @@
 
 比亚迪手表蓝牙钥匙 · 靠近解锁（HarmonyOS 手机端）。
 
-**本仓库只用于分发安装包，不含源码，也不发布更新日志。** 下载请到 [Releases](../../releases/latest)。
+**本仓库只用于分发安装包，不含源码，也不发布更新日志；只保留最新版本的安装包，旧版本会下架。** 下载请到 [Releases](../../releases/latest)。
 
 | | |
 |---|---|
 | 包名 | `com.hmos.BydNearkey` |
-| 当前版本 | v0.9.77（versionCode 1000077） |
+| 当前版本 | v0.9.82（versionCode 1000082） |
 | 最低系统 | HarmonyOS 6.0.0 (API 20) |
 | 安装包格式 | `.app`（HarmonyOS App Pack，压缩为 zip 发布） |
 
 ## 下载
 
-在 [Releases](../../releases/latest) 里下载，同一版本提供两个包：
+在 [Releases](../../releases/latest) 里下载（每个版本只有一个包，旧版本不保留）：
 
 | 文件 | 说明 |
 |---|---|
-| `BydNearKey-vX.Y.Z-signed.zip` | 已签名（release 证书，`app_gallery` 发布类型），解压得到 `BydNearKey-default-re-signed.app`，多数设备可直接装 |
-| `BydNearKey-vX.Y.Z-unsigned.zip` | 未签名，解压得到 `BydNear-vX.Y.Z-unsigned.app`，需自己用证书重签 |
+| `BydNearKey-vX.Y.Z-unsigned.zip` | 未签名，解压得到 `BydNear-vX.Y.Z-unsigned.app`，需自己用证书重签后再装 |
 
 ## 安装
 
 ```bash
+unzip BydNearKey-v0.9.82-unsigned.zip
+
 # 1. 确认手机已连接（hdc 在 DevEco Studio 的 toolchains 目录下）
 hdc list targets
 
-# 2. 安装（已签名包）
-hdc install -r BydNearKey-default-re-signed.app
-
-# 或安装未签名包（需先自行签名）
-hdc install -r BydNear-v0.9.77-unsigned.app
+# 2. 安装（未签名包，需先自行签名）
+hdc install -r BydNear-v0.9.82-unsigned.app
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
