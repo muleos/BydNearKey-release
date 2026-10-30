@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | 包名 | `com.hmos.BydNearkey` |
-| 当前版本 | v0.9.92（versionCode 1000092） |
+| 当前版本 | v0.9.95（versionCode 1000095） |
 | 最低系统 | HarmonyOS 6.0.0 (API 20) |
 | 安装包格式 | `.app`（HarmonyOS App Pack，压缩为 zip 发布） |
 
@@ -50,7 +50,7 @@
 
 ## 下载
 
-在 [Releases](../../releases) 里下载，一般直接用最新的 [v0.9.92](../../releases/latest)。每版两个包，按需二选一：
+在 [Releases](../../releases) 里下载，一般直接用最新的 [v0.9.95](../../releases/latest)。每版两个包，按需二选一：
 
 | 文件 | 说明 |
 |---|---|
@@ -63,21 +63,22 @@
 ## 安装
 
 ```bash
-unzip BydNearKey-v0.9.92-unsigned.zip
+unzip BydNearKey-v0.9.95-unsigned.zip
 
 # 1. 确认手机已连接（hdc 在 DevEco Studio 的 toolchains 目录下）
 hdc list targets
 
 # 2a. 装 App Pack（未签名包，需先自行签名）
-hdc install -r BydNear-v0.9.92-unsigned.app
+hdc install -r BydNear-v0.9.95-unsigned.app
 
 # 2b. 或者直接装单独下载的 HAP（不用解压）
-hdc install -r BydNearKey-v0.9.92-unsigned.hap
+hdc install -r BydNearKey-v0.9.95-unsigned.hap
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
 
-若设备上已装同 versionCode 的版本，覆盖安装可能提示版本冲突，先卸载再装即可。
+本版 versionCode `1000095`，可直接覆盖装在机器上的 0.9.92~0.9.94（含测试包），无需先卸载；
+若装在更高 versionCode 的包上，覆盖安装可能提示版本冲突，先卸载再装即可。
 
 > 未签名包装到真机需要设备已开启开发者模式；若要长期使用，请用你自己的证书重新签名。
 
@@ -97,7 +98,8 @@ hdc install -r BydNearKey-v0.9.92-unsigned.hap
 
 | 版本 | 状态 | 一句话 |
 |---|---|---|
-| [v0.9.92](../../releases/tag/v0.9.92) | **最新** | 胎压改用车端原值 kPa（不再折算 bar）；胎压/空调卡去掉「数据时间」；设置接口诊断与我的最近动作折叠到 5 条 |
+| [v0.9.95](../../releases/tag/v0.9.95) | **最新** | 功能与 v0.9.92 一致，仅抬 versionCode 便于覆盖 0.9.93/0.9.94 测试包；上锁提速已撤回 |
+| [v0.9.92](../../releases/tag/v0.9.92) | 归档 | 胎压按车端原值 kPa 显示、胎压/空调卡去掉「数据时间」、设置与我的长列表折叠 5 条 |
 | [v0.9.91](../../releases/tag/v0.9.91) | 归档 | **回退版**：撤掉 v0.9.89/0.9.90 两套后台保活改动，功能行为回到 v0.9.88 |
 | [v0.9.90](../../releases/tag/v0.9.90) | 已撤回 | 从最近任务中移除（无窗口后台能力续命）——手机上仍留不住，v0.9.91 已撤掉 |
 | [v0.9.89](../../releases/tag/v0.9.89) | 已撤回 | 后台卡片保护（拦截关闭请求）——手机端不回调，v0.9.91 已撤掉 |
