@@ -2,7 +2,7 @@
 
 比亚迪手表蓝牙钥匙 · 靠近解锁（HarmonyOS 手机端）。
 
-**本仓库只用于分发安装包，不含源码，也不发布更新日志；只保留最新版本的安装包，旧版本会下架。** 下载请到 [Releases](../../releases/latest)。
+**本仓库只用于分发安装包，不含源码，也不发布更新日志；自 v0.9.88 起保留全部历史版本，每个版本同时提供 `.zip`（App Pack）与 `.hap`（单 HAP）两种格式。** 下载请到 [Releases](../../releases)。
 
 有问题、要激活口令，或想反馈改进建议，请加 **QQ 群 974801085**（[一键加群](https://qun.qq.com/universal-share/share?ac=1&authKey=APxySIvcWIfPQjOaM43RswoPZwNSInZZIz04QWGwxaRoYgLJeJpV%2BCMOZfnymooh&busi_data=eyJncm91cENvZGUiOiI5NzQ4MDEwODUiLCJ0b2tlbiI6IlpYQjJGdVRNZmM1MXpPREdOam5Ka3JUUCt5SzFtNUtRZkVkRkFkQ3ltOFY4WU05dG4ra1g4akZEVzVLcytCelciLCJ1aW4iOiIxMTg3NjA3MDcxIn0%3D&data=WPfffiXVTy_2zxiB8dkp2Ylc6HA6GL73eHLnDZwt4CUmnX9xvJfKgll6L30eWgJhvnKCuwdjNnbpkrzaQDd1FA&svctype=4&tempid=h5_group_info)）。
 
@@ -50,11 +50,12 @@
 
 ## 下载
 
-在 [Releases](../../releases/latest) 里下载（每个版本只有一个包，旧版本不保留）：
+在 [Releases](../../releases) 里下载，一般直接用最新的 [v0.9.89](../../releases/latest)。每版两个包，按需二选一：
 
 | 文件 | 说明 |
 |---|---|
-| `BydNearKey-vX.Y.Z-unsigned.zip` | 未签名，解压得到 `BydNear-vX.Y.Z-unsigned.app`，需自己用证书重签后再装 |
+| `BydNearKey-vX.Y.Z-unsigned.zip` | HarmonyOS App Pack（`.app`）压缩包，解压得到 `BydNear-vX.Y.Z-unsigned.app`；未签名，需自己用证书重签后再装 |
+| `BydNearKey-vX.Y.Z-unsigned.hap` | 单个 HAP（模块级安装包），不用解压，可直接安装；同样未签名 |
 
 ## 安装
 
@@ -64,8 +65,11 @@ unzip BydNearKey-v0.9.89-unsigned.zip
 # 1. 确认手机已连接（hdc 在 DevEco Studio 的 toolchains 目录下）
 hdc list targets
 
-# 2. 安装（未签名包，需先自行签名）
+# 2a. 装 App Pack（未签名包，需先自行签名）
 hdc install -r BydNear-v0.9.89-unsigned.app
+
+# 2b. 或者直接装单独下载的 HAP（不用解压）
+hdc install -r BydNearKey-v0.9.89-unsigned.hap
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
@@ -83,6 +87,15 @@ hdc install -r BydNear-v0.9.89-unsigned.app
 
 车况页可以看电量、车门车窗状态，也能远程控车；首页「后台检测」可以查看
 蓝牙信号强度、手选感应距离阈值。
+
+## 版本历史
+
+自 v0.9.88 起保留全部历史版本，旧版本不再下架。每个版本都同时挂了 `.zip` 与 `.hap`。
+
+| 版本 | 状态 | 一句话 |
+|---|---|---|
+| [v0.9.89](../../releases/tag/v0.9.89) | **最新** | 设置页新增「后台卡片保护」：划掉最近任务卡片时不退出应用，可查拦截次数 |
+| [v0.9.88](../../releases/tag/v0.9.88) | 归档 | 隐藏「油液与耗材」卡、健康检测移到页尾、空调卡进页面自动补拉并扩充内容 |
 
 ## 反馈与交流
 
