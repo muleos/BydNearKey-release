@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | 包名 | `com.hmos.BydNearkey` |
-| 当前版本 | v0.9.83（versionCode 1000083） |
+| 当前版本 | v0.9.84（versionCode 1000084） |
 | 最低系统 | HarmonyOS 6.0.0 (API 20) |
 | 安装包格式 | `.app`（HarmonyOS App Pack，压缩为 zip 发布） |
 
@@ -51,13 +51,13 @@
 ## 安装
 
 ```bash
-unzip BydNearKey-v0.9.83-unsigned.zip
+unzip BydNearKey-v0.9.84-unsigned.zip
 
 # 1. 确认手机已连接（hdc 在 DevEco Studio 的 toolchains 目录下）
 hdc list targets
 
 # 2. 安装（未签名包，需先自行签名）
-hdc install -r BydNear-v0.9.83-unsigned.app
+hdc install -r BydNear-v0.9.84-unsigned.app
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
