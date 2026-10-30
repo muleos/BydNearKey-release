@@ -4,6 +4,8 @@
 
 **本仓库只用于分发安装包，不含源码，也不发布更新日志；只保留最新版本的安装包，旧版本会下架。** 下载请到 [Releases](../../releases/latest)。
 
+有问题、要激活口令，或想反馈改进建议，请加 **QQ 群 974801085**（[一键加群](https://qun.qq.com/universal-share/share?ac=1&authKey=APxySIvcWIfPQjOaM43RswoPZwNSInZZIz04QWGwxaRoYgLJeJpV%2BCMOZfnymooh&busi_data=eyJncm91cENvZGUiOiI5NzQ4MDEwODUiLCJ0b2tlbiI6IlpYQjJGdVRNZmM1MXpPREdOam5Ka3JUUCt5SzFtNUtRZkVkRkFkQ3ltOFY4WU05dG4ra1g4akZEVzVLcytCelciLCJ1aW4iOiIxMTg3NjA3MDcxIn0%3D&data=WPfffiXVTy_2zxiB8dkp2Ylc6HA6GL73eHLnDZwt4CUmnX9xvJfKgll6L30eWgJhvnKCuwdjNnbpkrzaQDd1FA&svctype=4&tempid=h5_group_info)）。
+
 | | |
 |---|---|
 | 包名 | `com.hmos.BydNearkey` |
@@ -39,13 +41,26 @@ hdc install -r BydNear-v0.9.82-unsigned.app
 
 ## 首次使用
 
-1. **首次打开会停在激活页，需要输入 6 位激活口令**（口令每天 0 点更新，向作者获取当天口令）
+1. **首次打开会停在激活页，需要输入 6 位激活口令**（口令每天 0 点更新，可在 QQ 群 974801085 里获取当天口令）
 2. 激活后进扫码登录页，用手机上的**比亚迪 App** 扫描表盘二维码 → 手机上点确认
 3. 登录成功后自动写入车辆信息与蓝牙钥匙，回到首页
 4. 之后靠近车辆即可解锁，离开自动上锁（可在设置里关掉）
 
 车况页可以看电量、车门车窗状态，也能远程控车；首页「后台检测」可以查看
 蓝牙信号强度、手选感应距离阈值。
+
+## 反馈与交流
+
+遇到问题、想要当天激活口令，或有改进建议，欢迎加入 QQ 群交流：
+
+| | |
+|---|---|
+| QQ 群号 | **974801085** |
+| 加群 | [点这里一键加群](https://qun.qq.com/universal-share/share?ac=1&authKey=APxySIvcWIfPQjOaM43RswoPZwNSInZZIz04QWGwxaRoYgLJeJpV%2BCMOZfnymooh&busi_data=eyJncm91cENvZGUiOiI5NzQ4MDEwODUiLCJ0b2tlbiI6IlpYQjJGdVRNZmM1MXpPREdOam5Ka3JUUCt5SzFtNUtRZkVkRkFkQ3ltOFY4WU05dG4ra1g4akZEVzVLcytCelciLCJ1aW4iOiIxMTg3NjA3MDcxIn0%3D&data=WPfffiXVTy_2zxiB8dkp2Ylc6HA6GL73eHLnDZwt4CUmnX9xvJfKgll6L30eWgJhvnKCuwdjNnbpkrzaQDd1FA&svctype=4&tempid=h5_group_info) |
+| 手动加群 | 打开 QQ → 右上角「+」→「加好友/群」→「找群」→ 搜索群号 `974801085` |
+
+加群链接偶尔会失效（带时效 token），失效时直接用群号搜索即可。反馈问题时附上
+手机型号、系统版本和「后台检测」页的截图，能快很多。
 
 ## 免责声明
 
