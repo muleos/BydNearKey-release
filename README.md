@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | 包名 | `com.hmos.BydNearkey` |
-| 当前版本 | v0.9.86（versionCode 1000086） |
+| 当前版本 | v0.9.87（versionCode 1000087） |
 | 最低系统 | HarmonyOS 6.0.0 (API 20) |
 | 安装包格式 | `.app`（HarmonyOS App Pack，压缩为 zip 发布） |
 
@@ -30,9 +30,10 @@
 健康检测（车端自检位：发动机、制动、ABS、SRS、胎压监测、车身稳定、转向、冷却液温度、
 机油压力、动力电池、充电系统…）、车门车窗、胎压（bar/kPa 双单位 + 监测结论 + 数据时间）、
 车内 / 车外温度、空调、里程与能耗（总里程、纯电里程、混动里程、两种平均能耗）、
-整车状态（OK 灯、行驶状态、电源状态、车速、功率、冷却液温度、哨兵模式）。
+整车状态（OK 灯、行驶状态、电源状态、车速、功率、冷却液温度）、
+油液与耗材（机油、制动液、变速箱油、差速器油、减震油、电机 / 电池 / 长效冷却液）。
 **按你这台车实际支持的功能显示**——没天窗的车不会画天窗，没胎压监测的不画胎压格，
-没有哨兵模式的不会多出那一行。
+车端没下发的项整行不出现。
 
 **5. 控车消息推送到 MeoW**
 设置里填个昵称就能开，每次控车成功推一条手机通知，人不在车边也知道成没成。后期会增加「传送鸽」。
@@ -55,13 +56,13 @@
 ## 安装
 
 ```bash
-unzip BydNearKey-v0.9.86-unsigned.zip
+unzip BydNearKey-v0.9.87-unsigned.zip
 
 # 1. 确认手机已连接（hdc 在 DevEco Studio 的 toolchains 目录下）
 hdc list targets
 
 # 2. 安装（未签名包，需先自行签名）
-hdc install -r BydNear-v0.9.86-unsigned.app
+hdc install -r BydNear-v0.9.87-unsigned.app
 ```
 
 也可以直接用 DevEco Studio 的 Device Manager 选择该 `.app` 安装。
